@@ -170,8 +170,8 @@ if __name__ == '__main__':
     parser.add_argument('--step', type=lambda x: int(x, 0), default=1, help='Langkah penambahan')
     parser.add_argument('--file', required=True, help='File target public keys (format: .txt untuk hex, .bin untuk binary)')
     parser.add_argument('--keys-per-launch', type=int, default=2**20, help='Jumlah kunci per batch GPU (default: 1,048,576)')
-    parser.add_argument('--reduction-step', type=int, default=1000000, help='Langkah pengurangan untuk membuat DP')
-    parser.add_argument('--num-dp', type=int, default=1000000, help='Jumlah DP points (default: 100,000)')  # Increased number of DP
+    parser.add_argument('--reduction-step', type=int, default=2**28, help='Langkah pengurangan untuk membuat DP')
+    parser.add_argument('--num-dp', type=int, default=2**28, help='Jumlah DP points (default: 100,000)')  # Increased number of DP
     parser.add_argument('--bloom-fp-rate', type=float, default=0.001, help='False positive rate untuk Bloom Filter (default: 0.001)')  # Lower FP rate
     parser.add_argument('--no-dp', action='store_true', help='Nonaktifkan DP untuk benchmarking')
     args = parser.parse_args()
