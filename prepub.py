@@ -380,7 +380,7 @@ if __name__ == '__main__':
                 temp_current += keys_this_launch * args.step
 
             # Geser window ke bawah
-            window_size = 33554432  # 2^25
+            window_size = 268435457  # 2^25
             current_start -= window_size
             current_end -= window_size
             iteration += 1
